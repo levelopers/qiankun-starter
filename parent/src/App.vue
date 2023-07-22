@@ -3,13 +3,23 @@
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/child">Child</router-link>
+      <router-link to="/vue3-child">vue3-child</router-link> |
+      <router-link to="/vue2-child">vue2-child</router-link>
     </nav>
+    <MyDialog />
     <router-view/>
     <div id="qiankun-container"></div>
   </div>
 </template>
-
+<script>
+import MyDialog from './components/MyDialog.vue'
+export default {
+  name: 'App',
+  components: {
+    MyDialog
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

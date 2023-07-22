@@ -9,9 +9,9 @@ Vue.config.productionTip = false;
 let router = null;
 let instance = null;
 function render(props = {}) {
-  const { container } = props;
+  const { container, routerBase } = props;
   router = new VueRouter({
-    base: window.__POWERED_BY_QIANKUN__ ? '/child/' : '/',
+    base: window.__POWERED_BY_QIANKUN__ ? routerBase : process.env.BASE_URL,
     mode: 'history',
     routes,
   });
